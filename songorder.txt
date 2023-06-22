@@ -9,3 +9,6 @@ varmebolja.md
 svepskal.md
 dansksnapsvisa.md
 drunkensailor.md
+spritbolaget.md
+drickaupp.md
+talteori.md
