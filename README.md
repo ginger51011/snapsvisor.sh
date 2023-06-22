@@ -9,6 +9,12 @@ kan du använda
 sudo apt install pandoc texlive-extra-utils
 ```
 
+och på Fedora
+
+```
+sudo dnf install pandoc texlive-pdfbook2
+```
+
 för detta.
 
 För att bygga projektet kör du bara

@@ -25,14 +25,30 @@ if (( num_songs < num_order )); then
 fi
 
 OUTPUT_PATH=${1:-"sanghafte.pdf"}
-TMPFILE=${mktmp "/tmp/sanghafte-XXXXX.pdf"}
+
+# read each line from songorder.txt
+while IFS= read -r line
+do
+    # check if the line starts with "songs/"
+    if [[ $line != songs/* ]]; then
+        echo "Warning: '$line' does not start with 'songs/'. Prepending 'songs/' to it."
+        line="songs/$line"
+    fi
+
+    # check if the file exists
+    if [[ ! -f $line ]]; then
+        echo "Warning: '$line' does not exist."
+    else
+        # add to array of songs
+        songs+=("$line")
+    fi
+done < songorder.txt
 
 # Create PDF
 echo "Creating PDF..."
-pandoc settings.yaml $(cat songorder.txt) -o $TMPFILE
+pandoc settings.yaml "${songs[@]}" -o $OUTPUT_PATH
 
 # Make it a booklet
 echo "Creating booklet..."
-pdfbook2 $TMPFILE
-cp $TMPFILE $OUTPUT_PATH
-rm $TMPFILE
+pdfbook2 $OUTPUT_PATH && echo "Booklet available at $OUTPUT_PATH"
+
