@@ -2,17 +2,17 @@
 
 _Tack till GPT-4 för hjälpen och min framtida redundans!_
 
-För att bygga behöver du ha `pandoc` och `pdfbook2` installerat. På Ubuntu
+För att bygga behöver du ha `pandoc` och `pdfjam` installerat. På Ubuntu
 kan du använda
 
 ```
-sudo apt install pandoc texlive-extra-utils
+sudo apt install pandoc pdfjam
 ```
 
 och på Fedora
 
 ```
-sudo dnf install pandoc texlive-pdfbook2
+sudo dnf install pandoc texlive-pdfjam
 ```
 
 för detta.

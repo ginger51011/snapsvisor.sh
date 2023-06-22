@@ -2,7 +2,7 @@
 
 # Check requirements
 # List of required commands
-commands=("pandoc" "pdfbook2")
+commands=("pandoc" "pdfjam")
 
 # Check if each command is available
 for cmd in "${commands[@]}"; do
@@ -24,7 +24,6 @@ if (( num_songs < num_order )); then
     echo "Warning: There are less markdown files in the songs/ directory than lines in songorder.txt. A song might be missing."
 fi
 
-OUTPUT_PATH=${1:-"sanghafte.pdf"}
 
 # read each line from songorder.txt
 while IFS= read -r line
@@ -44,13 +43,17 @@ do
     fi
 done < songorder.txt
 
+OUTPUT_PATH=${1:-"sanghafte.pdf"}
+TMP="tmp.pdf"
+
 # Create PDF
 echo "Creating PDF..."
-pandoc settings.yaml "${songs[@]}" -o $OUTPUT_PATH
+pandoc settings.yaml "${songs[@]}" -o $TMP
 
 # Make it a booklet
 echo "Creating booklet..."
-pdfbook2 $OUTPUT_PATH && echo "Booklet available at $OUTPUT_PATH"
+pdfjam --booklet 'true' --landscape --outfile $OUTPUT_PATH $TMP && echo "Booklet available at $OUTPUT_PATH"
+rm $TMP
 
 # Open the PDF if we have XDG
 if xdg-open --version &> /dev/null; then
