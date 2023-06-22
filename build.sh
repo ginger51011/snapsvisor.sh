@@ -13,6 +13,17 @@ for cmd in "${commands[@]}"; do
     fi
 done
 
+# Count the number of markdown files in the songs/ directory
+num_songs=$(find songs/ -name '*.md' | wc -l)
+
+# Count the number of lines in songorder.txt
+num_order=$(wc -l < songorder.txt)
+
+# Check if the number of songs is less than the number of lines in songorder.txt
+if (( num_songs < num_order )); then
+    echo "Warning: There are less markdown files in the songs/ directory than lines in songorder.txt. A song might be missing."
+fi
+
 OUTPUT_PATH=${1:-"sanghafte.pdf"}
 TMPFILE=${mktmp "/tmp/sanghafte-XXXXX.pdf"}
 
