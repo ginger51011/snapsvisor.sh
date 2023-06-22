@@ -36,5 +36,6 @@ _PRs welcome!_
 För att lägga till en låt behöver du bara göra följande
 
 1. Lägg till en Markdown-fil med din visa i `songs/`, t.ex.
-   `songs/mariagartilllophtet.md`
+   `songs/mariagartilllophtet.md` (för att få snygga nya rader behöver
+   varje rad sluta på två blanksteg, `<space><space>`)
 2. Lägg till var i häftet det ska vara i `songorder.txt`

@@ -52,3 +52,7 @@ pandoc settings.yaml "${songs[@]}" -o $OUTPUT_PATH
 echo "Creating booklet..."
 pdfbook2 $OUTPUT_PATH && echo "Booklet available at $OUTPUT_PATH"
 
+# Open the PDF if we have XDG
+if xdg-open --version &> /dev/null; then
+  xdg-open $OUTPUT_PATH
+fi
