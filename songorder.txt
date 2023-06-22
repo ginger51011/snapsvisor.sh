@@ -1,3 +1,5 @@
 helangar.md
 kallsup.md
 fetafransyskor.md
+avbitetslut.md
+bogsering.md
