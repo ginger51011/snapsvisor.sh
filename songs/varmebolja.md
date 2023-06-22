@@ -1,7 +1,6 @@
 # Värmebölja
 
-**Text**: Hasse Nilsson
-
+**Text**: Hasse Nilsson  
 **Melodi**: Blåsippan ute i backarna står
 
 Sommarens hetta är olidligt hård  

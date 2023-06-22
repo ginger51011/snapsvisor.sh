@@ -1,4 +1,5 @@
 helangar.md
+hellandgore.md
 kallsup.md
 fetafransyskor.md
 avbitetslut.md

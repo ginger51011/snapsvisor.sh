@@ -1,7 +1,6 @@
 # Kallsup
 
-**Text**: Lina Edelman
-
+**Text**: Lina Edelman  
 **Melodi**: Helan Går
 
 Till våran hamn  

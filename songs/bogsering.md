@@ -1,7 +1,6 @@
 # Bogsering
 
-**Text**: Magnus Edlund
-
+**Text**: Magnus Edlund  
 **Melodi**: Brevet från kolonien
 
 Sitter här och blir bogserad.  

@@ -1,7 +1,6 @@
 # Svepskäl
 
-**Text**: Henrik Carlsson && Jacob Nienhuysen
-
+**Text**: Henrik Carlsson && Jacob Nienhuysen  
 **Melodi**: Skånska slott och herresäten
 
 Har tröttnat på Tinder och matchmakingtjänster  

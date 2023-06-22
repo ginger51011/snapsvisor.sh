@@ -1,7 +1,6 @@
 # Dansk snapsvisa
 
-**Text**: Svårtydd
-
+**Text**: Svårtydd  
 **Melodi**: Valfri
 
 Icke nu,  
