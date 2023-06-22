@@ -3,3 +3,5 @@ kallsup.md
 fetafransyskor.md
 avbitetslut.md
 bogsering.md
+kuken.md
+tankomjaghadelillanubben.md
