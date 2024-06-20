@@ -15,6 +15,12 @@ och på Fedora
 sudo dnf install pandoc texlive-pdfjam
 ```
 
+och på Arch (btw)
+
+```
+sudo pacman -Ss pandoc texlive-binextra
+```
+
 för detta.
 
 För att bygga projektet kör du bara
