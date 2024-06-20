@@ -50,6 +50,15 @@ TMP="tmp.pdf"
 echo "Creating PDF..."
 pandoc settings.yaml "${songs[@]}" -o $TMP
 
+ok="$?"
+if [[ $ok -ne 0 ]]; then
+    echo "PDF creation failed!"
+    if [[ -f "$TMP" ]]; then
+        rm "$TMP"
+    fi
+    exit 1
+fi
+
 # Make it a booklet
 echo "Creating booklet..."
 pdfjam --booklet 'true' --landscape --outfile $OUTPUT_PATH $TMP && echo "Booklet available at $OUTPUT_PATH"
